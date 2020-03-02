@@ -1112,8 +1112,8 @@ export default class Map extends Component {
     }
     const boxClassname = this.props.boxClassname || ''
 
-    const left = -((tileCenterX - tileMinX) * 256 - scaleWidth / 2)
-    const top = -((tileCenterY - tileMinY) * 256 - scaleHeight / 2)
+    const left = - Math.round((tileCenterX - tileMinX) * 256 - scaleWidth / 2)
+    const top = - Math.round((tileCenterY - tileMinY) * 256 - scaleHeight / 2)
 
     const tilesStyle = {
       position: 'absolute',
